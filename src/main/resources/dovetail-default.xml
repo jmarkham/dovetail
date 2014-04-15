@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- ~ Licensed to the Apache Software Foundation (ASF) under one ~ or more 
+	contributor license agreements. See the NOTICE file ~ distributed with this 
+	work for additional information ~ regarding copyright ownership. The ASF 
+	licenses this file ~ to you under the Apache License, Version 2.0 (the ~ 
+	"License"); you may not use this file except in compliance ~ with the License. 
+	You may obtain a copy of the License at ~ ~ http://www.apache.org/licenses/LICENSE-2.0 
+	~ ~ Unless required by applicable law or agreed to in writing, software ~ 
+	distributed under the License is distributed on an "AS IS" BASIS, ~ WITHOUT 
+	WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. ~ See the 
+	License for the specific language governing permissions and ~ limitations 
+	under the License. -->
+
+<configuration>
+	<property>
+		<name>dovetail.app.name</name>
+		<value>Dovetail</value>
+	</property>
+	<property>
+		<name>dovetail.admin.user</name>
+		<value>dovetail</value>
+	</property>
+	<property>
+		<name>dovetail.admin.user.group</name>
+		<value>hadoop</value>
+	</property>
+	<property>
+		<name>dovetail.log.dir</name>
+		<value>/var/log/dovetail</value>
+	</property>
+	<property>
+		<name>dovetail.home</name>
+		<value></value>
+	</property>
+	<property>
+		<name>dovetail.am.hdfs.dir</name>
+		<value>${fs.defaultFS}/apps/dovetail/am</value>
+		<final>true</final>
+	</property>
+	<property>
+		<name>dovetail.am.local.dir</name>
+		<value>${dovetail.home}/lib</value>
+	</property>
+	<property>
+		<name>dovetail.am.jar</name>
+		<value>dovetail-am.jar</value>
+	</property>
+	<property>
+		<name>dovetail.jboss.dist.hdfs.dir</name>
+		<value>${fs.defaultFS}/apps/dovetail/dist</value>
+		<final>true</final>
+	</property>
+	<property>
+		<name>dovetail.jboss.dist.local.dir</name>
+		<value>${dovetail.home}/jboss-dist</value>
+	</property>
+	<property>
+		<name>dovetail.jboss.dist.file</name>
+		<value></value>
+	</property>
+	<property>
+		<name>dovetail.conf.hdfs.dir</name>
+		<value>${fs.defaultFS}/apps/dovetail/conf</value>
+		<final>true</final>
+	</property>
+	<property>
+		<name>dovetail.bin.local.dir</name>
+		<value>${dovetail.home}/bin</value>
+	</property>
+	<property>
+		<name>dovetail.bin.hdfs.dir</name>
+		<value>${fs.defaultFS}/apps/dovetail/bin</value>
+		<final>true</final>
+	</property>
+	<property>
+		<name>dovetail.container.script</name>
+		<value>dovetail-container.sh</value>
+		<final>true</final>
+	</property>
+	<property>
+		<name>dovetail.conf.local.dir</name>
+		<value>${dovetail.home}/conf</value>
+	</property>
+	<property>
+		<name>dovetail.symlink</name>
+		<value>dovetail</value>
+	</property>
+	<property>
+		<name>dovetail.jboss.management.realm</name>
+		<value>ManagementRealm</value>
+	</property>
+	<property>
+		<name>dovetail.jboss.domain.master.password</name>
+		<value></value>
+	</property>
+	<property>
+		<name>dovetail.jboss.domain.slave.password</name>
+		<value></value>
+	</property>
+	<property>
+		<name>dovetail.am.queue</name>
+		<value>default</value>
+	</property>
+	<property>
+		<name>dovetail.am.priority</name>
+		<value>0</value>
+	</property>
+	<property>
+		<name>dovetail.am.memory-mb</name>
+		<value>256</value>
+	</property>
+	<property>
+		<name>dovetail.container.priority</name>
+		<value>0</value>
+	</property>
+	<property>
+		<name>dovetail.container.count</name>
+		<value>2</value>
+	</property>
+	<property>
+		<name>dovetail.container.memory-mb</name>
+		<value>1024</value>
+	</property>
+	<property>
+		<name>dovetail.container.java.opts</name>
+		<value>-Xms64m -Xmx${dovetail.container.memory-mb}m -XX:MaxPermSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman</value>
+	</property>
+</configuration>

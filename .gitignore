@@ -1,0 +1,8 @@
+:.DS_Store
+.classpath
+.project
+.settings/*
+.class
+target/*
+**/jboss-eap-6.2.0.zip
+
